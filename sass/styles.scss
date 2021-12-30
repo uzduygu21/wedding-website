@@ -141,23 +141,7 @@ Animations
     transform: translate(-50%, 0)
   }
 }
-.floating-logo {
-  animation-name: floating-logo;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-@keyframes floating-logo {
-  from {
-    transform: translate(-50%, 0)
-  }
-  50% {
-    transform: translate(-50%, 10px)
-  }
-  to {
-    transform: translate(-50%, 0)
-  }
-}
+
 
 /* ==========================================================================
 Waypoinsts
@@ -293,13 +277,13 @@ Hero
 }
 .fixed {
   position: fixed;
-  background-color: rgba(55, 36, 40, .88);
+  background-color:rgb(255,215,0);
   z-index: 999;
   width: 100%;
 }
 header {
   padding: 50px 0;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgb(255,215,0);
   position: relative;
   width: 1170px;
   margin: 0 auto;
@@ -314,12 +298,7 @@ header {
       margin-right: 20px;
     }
   }
-  .logo {
-    display: inline-block;
-  }
-  .logo img {
-    height: 19px;
-  }
+
   ul.primary-nav {
     margin: 0 0 0 75px;
     padding: 0;
@@ -370,13 +349,6 @@ header {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-/* ==========================================================================
-Social share buttons
-========================================================================== */
-.share-bar {
-  margin-top: 20px;
 }
 
 /* ==========================================================================
@@ -537,14 +509,6 @@ Features-stack
   }
   .btn {
     margin-top: 10px;
-  }
-  .logo-placeholder {
-    width: 230px;
-    height: 230px;
-    position: absolute;
-    bottom: -285px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 
