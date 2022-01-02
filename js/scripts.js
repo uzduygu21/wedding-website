@@ -139,24 +139,34 @@ $(document).ready(function () {
     /********************** Embed youtube video *********************/
     $('.player').YTPlayer();
 
+        /********************** Toggle Map Content **********************/
+    $('#btn-show-map').click(function () {
+        $('#map-content').toggleClass('toggle-map-content');
+        $('#btn-show-content').toggleClass('toggle-map-content');
+    });
+    $('#btn-show-content').click(function () {
+        $('#map-content').toggleClass('toggle-map-content');
+        $('#btn-show-content').toggleClass('toggle-map-content');
+    });
+
 
     /********************** RSVP **********************/
-    // $('#rsvp-form').on('submit', function (e) {
-    //     e.preventDefault();
-    //     var data = $(this).serialize();
+     $('#rsvp-form').on('submit', function (e) {
+        e.preventDefault();
+         var data = $(this).serialize();
 
-    //     $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
-    //     $.post('https://script.google.com/macros/s/AKfycbxXYQhpl8UUTI3IKAZ-kIjRO4v_AbUykft7htrvgt7nWk8fh45iF4iJwXZhJ_7rkuzwmg/exec', data)
-    //     .done(function (data) {
-    //         console.log(data);
-    //         if (data.result === "error") {
-    //             $('#alert-wrapper').html(alert_markup('danger', data.message));
-    //         } else {
-    //             $('#alert-wrapper').html('');
-    //             $('#rsvp-modal').modal('show');
-    //         }
-    //     })
-    // });
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+         $.post('https://script.google.com/macros/s/AKfycbxXYQhpl8UUTI3IKAZ-kIjRO4v_AbUykft7htrvgt7nWk8fh45iF4iJwXZhJ_7rkuzwmg/exec', data)
+         .done(function (data) {
+             console.log(data);
+             if (data.result === "error") {
+                 $('#alert-wrapper').html(alert_markup('danger', data.message));
+             } else {
+                 $('#alert-wrapper').html('');
+                 $('#rsvp-modal').modal('show');
+             }
+         })
+     });
 
 });
 
